@@ -45,7 +45,7 @@ function sendSerialData(climateData) {
 
 function broadcast(climateData) {
   for (connection in connections) {
-    connections[connection].emit('climate data', JSON.stringify(parse(climateData)));
+    connections[connection].emit('climate data', parse(climateData));
   }
 }
 
